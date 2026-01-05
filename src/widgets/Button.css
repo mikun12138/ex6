@@ -1,0 +1,46 @@
+.btn {
+    --x: 0%;
+    --y: 0%;
+
+    --color0_rgb: rgb(168, 212, 239);
+    --color0_a: calc(50% + (50% - var(--x)) * 0.5);
+    --color1_rgb: rgb(159, 238, 204);
+    --color1_a: calc(50% + (50% - var(--y)) * 0.5);
+
+    background: linear-gradient(135deg,
+            color-mix(in srgb, var(--color0_rgb) var(--color0_a), transparent) 0%,
+            color-mix(in srgb, var(--color1_rgb) var(--color1_a), transparent) 100%);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+
+    opacity: 0.8;
+
+    position: absolute;
+
+    left: calc(50% + var(--x));
+    top: calc(50% + var(--y));
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    filter: brightness(0.9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-basic {
+    font-family: fantasy;
+    font-size: clamp(1px, 3vw, 60px);
+    color: #818aca;
+    overflow: hidden;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

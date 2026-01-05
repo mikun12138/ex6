@@ -1,0 +1,35 @@
+.sidebar-toggle {
+    display: none;
+}
+
+.toggle-btn {
+    background-color: rgba(119, 126, 238, 0.4);
+    color: white;
+
+    font-size: 18px;
+
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 8px 12px;
+    border-radius: 5px;
+
+    transition: all 0.3s ease;
+    z-index: 1001;
+
+    cursor: pointer;
+}
+
+.sidebar {
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    color: white;
+
+    position: fixed;
+
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.toggle-btn-open {
+    background-color: rgba(119, 126, 238, 0.0);
+}

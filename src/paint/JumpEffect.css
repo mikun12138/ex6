@@ -1,0 +1,33 @@
+@keyframes shake-jump {
+    0% {
+        transform: translate(-50%, -50%)
+    }
+
+    40% {
+        transform: translate(-50%, -65%) rotateZ(5deg)
+    }
+
+    50% {
+        transform: translate(-50%, -65%)
+    }
+
+    60% {
+        transform: translate(-50%, -55%) rotateZ(-7deg)
+    }
+
+    100% {
+        transform: translate(-50%, -50%)
+    }
+}
+
+.jumpable {
+    transition: background-color 0.2s;
+}
+
+.jumpable:focus-visible {
+    animation: shake-jump 0.3s ease-out;
+}
+
+.jumping {
+    animation: shake-jump 0.3s ease-out;
+}
