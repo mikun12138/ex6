@@ -5,7 +5,10 @@ import { color2string, hsv2Hsl, type HsvColor } from "../utils/color/ColorUtils"
 import Button from "../widgets/Button"
 import { mikuSounds } from "../assets/sounds"
 import "./Paint.css"
-import miku_cong_image from "../assets/1.png"
+import onion_image from "../assets/onion.png"
+import miku_image from "../assets/miku.png"
+import bread_image from "../assets/bread.png"
+import teto_image from "../assets/teto.png"
 import { INDEX_TO_CONFIG, KEY_MAP, type KeyConfig, type MusicKeyEffect } from "./MusicEffects"
 
 function Paint() {
@@ -74,7 +77,7 @@ function Paint() {
      * music
      */
 
-    const activeEffects = useRef<MusicKeyEffect[]>([]);
+    const activeEffects = useRef<MusicKeyEffect[]>([])
 
     const [jumpingStates, setJumpingStates] = useState<Record<number, boolean>>({})
 
@@ -105,30 +108,23 @@ function Paint() {
     }, [playNote])
 
     useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d")!;
+        const canvas = canvasRef.current!!
+        const ctx = canvas.getContext("2d")!!
 
-    const render = () => {
-        // --- B. 批量调用 draw ---
-        // 我们遍历队列，让每个 effect 自己画自己
-        // filter 的作用是：如果 draw 返回 false (代表动画结束)，就从数组中剔除
-        activeEffects.current = activeEffects.current.filter(effect => {
-            // 每一帧都会调用这个 effect 的 draw 方法
-            const isAlive = effect.draw(ctx); 
-            return isAlive;
-        });
+        const render = () => {
+            activeEffects.current = activeEffects.current.filter(effect => {
+                ctx.fillStyle = "rgba(255, 255, 255, 0.02)"
+                ctx.fillRect(0, 0, canvas.width, canvas.height)
+                return effect.draw(ctx)
+            })
 
-        // --- C. 递归调用，形成循环 ---
-        requestAnimationFrame(render);
-    };
+            requestAnimationFrame(render)
+        }
 
-    // 启动循环
-    const animationId = requestAnimationFrame(render);
+        const animationId = requestAnimationFrame(render)
+        return () => cancelAnimationFrame(animationId)
+    }, [])
 
-    // 组件卸载时停止循环，防止内存泄漏
-    return () => cancelAnimationFrame(animationId);
-}, []);
 
     const musicKeys = (() => {
         let result = []
@@ -146,7 +142,18 @@ function Paint() {
                     <Button
                         key={currentIndex}
                         style={{
-                            backgroundImage: `url(${miku_cong_image})`,
+                            backgroundImage: `url(${(() => {
+                                    if (index < 8) {
+                                        return onion_image
+                                    } else if (index < 16) {
+                                        return miku_image
+                                    } else if (index < 24) {
+                                        return bread_image
+                                    } else if (index < 32) {
+                                        return teto_image
+                                    }
+                                })()
+                                })`,
                             backgroundSize: 'auto 100%',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: "center"
