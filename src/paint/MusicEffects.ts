@@ -153,7 +153,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             const r3 = Math.random()
 
             return new CustomImageMotionEffect(
-                onionImg, 0.5, 1, (t) => {
+                onionImg, 0.5, 1, (_t) => {
                     return [r0, r1]
                 }, (t) => {
                     return r2 * 360 + t * (450 + r3 * 450)
@@ -161,9 +161,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -179,7 +179,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             let r0 = Math.random()
             let r1 = Math.random()
             return new CustomImageMotionEffect(
-                onionImg, 0.1, 1, (t) => {
+                onionImg, 0.1, 1, (_t) => {
                     return [Math.random(), Math.random()]
                 }, (t) => {
                     return r0 * 360 + t * r1 * 360
@@ -187,9 +187,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -215,15 +215,15 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-170, -50)
                 }, (t) => {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -249,7 +249,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-60, 30)
                 }, (t) => {
                     let random = Math.random()
@@ -257,7 +257,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [scale, scale]
                 }, (t) => {
                     return 1 - t * 0.5
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -292,7 +292,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const resultY = t > 0.3 ? y + (y + targetY) * (t - 0.3) : y
 
                     return [resultX, resultY]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -316,7 +316,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             return new CustomImageMotionEffect(
                 onionImg, 0.4, 5, (t) => {
                     return [1.2 - t * 2.4, r0]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -342,7 +342,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [1.2 - t * 2.4, r0]
                 }, (t) => {
                     return -30 + (t * 600) % random(40, 80)
-                }, (t) => {
+                }, (_t) => {
                     let scale = 6
                     return [scale, scale]
                 }, (t) => {
@@ -367,7 +367,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             const r3 = Math.random()
 
             return new CustomImageMotionEffect(
-                mikuImg, 0.5, 1, (t) => {
+                mikuImg, 0.5, 1, (_t) => {
                     return [r0, r1]
                 }, (t) => {
                     return r2 * 360 + t * (450 + r3 * 450)
@@ -375,9 +375,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -393,7 +393,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             let r0 = Math.random()
             let r1 = Math.random()
             return new CustomImageMotionEffect(
-                mikuImg, 0.1, 1, (t) => {
+                mikuImg, 0.1, 1, (_t) => {
                     return [Math.random(), Math.random()]
                 }, (t) => {
                     return r0 * 360 + t * r1 * 360
@@ -401,9 +401,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -429,15 +429,15 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-170, -50)
                 }, (t) => {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -463,7 +463,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-60, 30)
                 }, (t) => {
                     let random = Math.random()
@@ -471,7 +471,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [scale, scale]
                 }, (t) => {
                     return 1 - t * 0.5
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -506,7 +506,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const resultY = t > 0.3 ? y + (y + targetY) * (t - 0.3) : y
 
                     return [resultX, resultY]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -530,7 +530,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             return new CustomImageMotionEffect(
                 mikuImg, 0.4, 5, (t) => {
                     return [1.2 - t * 2.4, r0]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -556,7 +556,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [1.2 - t * 2.4, r0]
                 }, (t) => {
                     return -30 + (t * 600) % random(40, 80)
-                }, (t) => {
+                }, (_t) => {
                     let scale = 6
                     return [scale, scale]
                 }, (t) => {
@@ -581,7 +581,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             const r3 = Math.random()
 
             return new CustomImageMotionEffect(
-                breadImg, 0.5, 1, (t) => {
+                breadImg, 0.5, 1, (_t) => {
                     return [r0, r1]
                 }, (t) => {
                     return r2 * 360 + t * (450 + r3 * 450)
@@ -589,9 +589,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -607,7 +607,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             let r0 = Math.random()
             let r1 = Math.random()
             return new CustomImageMotionEffect(
-                breadImg, 0.1, 1, (t) => {
+                breadImg, 0.1, 1, (_t) => {
                     return [Math.random(), Math.random()]
                 }, (t) => {
                     return r0 * 360 + t * r1 * 360
@@ -615,9 +615,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -643,15 +643,15 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-170, -50)
                 }, (t) => {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -677,7 +677,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-60, 30)
                 }, (t) => {
                     let random = Math.random()
@@ -685,7 +685,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [scale, scale]
                 }, (t) => {
                     return 1 - t * 0.5
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -720,7 +720,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const resultY = t > 0.3 ? y + (y + targetY) * (t - 0.3) : y
 
                     return [resultX, resultY]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -744,7 +744,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             return new CustomImageMotionEffect(
                 breadImg, 0.4, 5, (t) => {
                     return [1.2 - t * 2.4, r0]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -770,7 +770,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [1.2 - t * 2.4, r0]
                 }, (t) => {
                     return -30 + (t * 600) % random(40, 80)
-                }, (t) => {
+                }, (_t) => {
                     let scale = 6
                     return [scale, scale]
                 }, (t) => {
@@ -795,7 +795,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             const r3 = Math.random()
 
             return new CustomImageMotionEffect(
-                tetoImage, 0.5, 1, (t) => {
+                tetoImage, 0.5, 1, (_t) => {
                     return [r0, r1]
                 }, (t) => {
                     return r2 * 360 + t * (450 + r3 * 450)
@@ -803,9 +803,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -821,7 +821,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             let r0 = Math.random()
             let r1 = Math.random()
             return new CustomImageMotionEffect(
-                tetoImage, 0.1, 1, (t) => {
+                tetoImage, 0.1, 1, (_t) => {
                     return [Math.random(), Math.random()]
                 }, (t) => {
                     return r0 * 360 + t * r1 * 360
@@ -829,9 +829,9 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -857,15 +857,15 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-170, -50)
                 }, (t) => {
                     let random = Math.random()
                     let scale = random + t * random
                     return [scale, scale]
-                }, (t) => {
+                }, (_t) => {
                     return 1
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -891,7 +891,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const y = r1 - (1 - et) * 0.75 * r3
 
                     return [x, y]
-                }, (t) => {
+                }, (_t) => {
                     return random(-60, 30)
                 }, (t) => {
                     let random = Math.random()
@@ -899,7 +899,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [scale, scale]
                 }, (t) => {
                     return 1 - t * 0.5
-                }, (t) => {
+                }, (_t) => {
                     return [
                         0.4,
                         3,
@@ -934,7 +934,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     const resultY = t > 0.3 ? y + (y + targetY) * (t - 0.3) : y
 
                     return [resultX, resultY]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -958,7 +958,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
             return new CustomImageMotionEffect(
                 tetoImage, 0.4, 5, (t) => {
                     return [1.2 - t * 2.4, r0]
-                }, (t) => {
+                }, (_t) => {
                     return 0
                 }, (t) => {
                     let random = Math.random()
@@ -984,7 +984,7 @@ export const KEY_MAP: Record<string, KeyConfig> = {
                     return [1.2 - t * 2.4, r0]
                 }, (t) => {
                     return -30 + (t * 600) % random(40, 80)
-                }, (t) => {
+                }, (_t) => {
                     let scale = 6
                     return [scale, scale]
                 }, (t) => {
